@@ -1,11 +1,10 @@
 Package: leebunce
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
+Title: A collection of functions used by Lee Bunce
+Version: 0.0.0.9000
+Author: Authors@R: person("Lee", "Bunce", email = "leebunce@riseup.net", role = c("aut", "cre", "cph"))
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Description: This package is a collection of functions I have creted that I commonly use.
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
