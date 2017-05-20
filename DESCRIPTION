@@ -8,3 +8,4 @@ Description: This package is a collection of functions I have creted that I comm
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.0.1

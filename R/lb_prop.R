@@ -1,13 +1,15 @@
-#' Calculate a proportion from a vector
+#' Calculate a proportion from a vector.
 #'
 #' @param x A vector to calculate a proportion from.
 #' @param numerator A vector of elements to count in the numerator.
 #' @param denominator A vector of elements to count in the denominator in addition to those included in the numerator.
+#' @param digits The number of digits to round to if converting proportion to percentage.
 #'
-#' @return The proportion of
+#' @return The proportion of specified values, presented as a percentage or proportion.
 #'
-#' @example
+#' @examples
 #' lb_prop(x = c(T, T, T, T, F, NA), numerator = T, denominator = F)
+#' lb_prop(x = c(T, T, T, T, F, NA), numerator = T, denominator = F, percent = FALSE)
 
 lb_prop <- function(x, numerator, denominator, percent = TRUE, digits = 1){
 
