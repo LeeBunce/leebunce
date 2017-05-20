@@ -9,12 +9,16 @@
 #' @example
 #' lb_prop(x = c(T, T, T, T, F, NA), numerator = T, denominator = c(T, F))
 
-lb_prop <- function(x, numerator, denominator){
+lb_prop <- function(x, numerator, denominator, round = TRUE){
 
   n <- sum(x %in% numerator)
   d <- sum(x %in% denominator)
 
   prop <- n/d
+
+  if(round == TRUE){
+    prop <- round(prop*100, 1)
+  }
 
   prop
 }
