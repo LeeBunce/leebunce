@@ -9,7 +9,7 @@
 #' @example
 #' lb_prop(x = c(T, T, T, T, F, NA), numerator = T, denominator = c(T, F))
 
-lb_prop <- function(x, numerator, denominator, round = TRUE){
+lb_prop <- function(x, numerator, denominator, round = TRUE, digits = 1){
 
   n <- sum(x %in% numerator)
   d <- sum(x %in% denominator)
@@ -17,7 +17,7 @@ lb_prop <- function(x, numerator, denominator, round = TRUE){
   prop <- n/d
 
   if(round == TRUE){
-    prop <- round(prop*100, 1)
+    prop <- round(prop*100, digits)
   }
 
   prop
