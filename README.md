@@ -1,6 +1,6 @@
 # leebunce
 
-The goal of leebunce is to ...
+This package is a collection of functions I have written over time that I regularly use.
 
 ## Installation
 
@@ -9,12 +9,4 @@ You can install leebunce from github with:
 ```R
 # install.packages("devtools")
 devtools::install_github("leebunce/leebunce")
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```R
-...
 ```
