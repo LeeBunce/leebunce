@@ -1,4 +1,4 @@
-#' Open multiple sheets from an excel workbook
+#' Read multiple sheets from an excel workbook
 #'
 #' @param x An excel workbook.
 #' @param ignore A vector of sheet names to ignore.

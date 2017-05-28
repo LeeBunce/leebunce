@@ -2,7 +2,7 @@
 % Please edit documentation in R/lb_read_excel_sheets.R
 \name{lb_read_excel_sheets}
 \alias{lb_read_excel_sheets}
-\title{Open multiple sheets from an excel workbook}
+\title{Read multiple sheets from an excel workbook}
 \usage{
 lb_read_excel_sheets(x, ignore = NULL, bind = TRUE, ...)
 }
@@ -19,7 +19,7 @@ lb_read_excel_sheets(x, ignore = NULL, bind = TRUE, ...)
 Reads all sheets from an excel file into R as a single data frame, or if bind = FALSE a list of data frames.
 }
 \description{
-Open multiple sheets from an excel workbook
+Read multiple sheets from an excel workbook
 }
 \examples{
 # Download Guardian university league table spreadsheet and save to desktop.
