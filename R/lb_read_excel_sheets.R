@@ -3,7 +3,7 @@
 #' @param x An excel workbook.
 #' @param ignore A vector of sheet names to ignore.
 #' @param bind If TRUE then return a single data frame with id column 'Sheet'. Otherwise returns a list of data frames.
-#' @param ... Additional arguments to be passed to readxl
+#' @param ... Additional arguments to be passed to read_excel.
 #'
 #' @return Reads all sheets from an excel file into R as a single data frame, or if bind = FALSE a list of data frames.
 #'

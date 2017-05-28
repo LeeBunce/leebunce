@@ -13,7 +13,7 @@ lb_read_excel_sheets(x, ignore = NULL, bind = TRUE, ...)
 
 \item{bind}{If TRUE then return a single data frame with id column 'Sheet'. Otherwise returns a list of data frames.}
 
-\item{...}{Additional arguments to be passed to readxl}
+\item{...}{Additional arguments to be passed to read_excel.}
 }
 \value{
 Reads all sheets from an excel file into R as a single data frame, or if bind = FALSE a list of data frames.
