@@ -2,26 +2,38 @@
 % Please edit documentation in R/lb_prop.R
 \name{lb_prop}
 \alias{lb_prop}
-\title{Calculate a proportion from a vector.}
+\alias{lb_ratio}
+\title{Calculate a proportion or a ratio from a vector.}
 \usage{
-lb_prop(x, numerator, denominator, percent = TRUE, digits = 1)
+lb_prop(x, numerator, denominator, percent = TRUE, round = TRUE,
+  digits = 1)
+
+lb_ratio(x, numerator, denominator, round = FALSE, digits = 1)
 }
 \arguments{
-\item{x}{A vector to calculate a proportion from.}
+\item{x}{A vector to calculate a proportion or ratio from.}
 
 \item{numerator}{A vector of elements to count in the numerator.}
 
-\item{denominator}{A vector of elements to count in the denominator in addition to those included in the numerator.}
+\item{denominator}{For lb_prop this is a vector of elements to count in the denominator in addition to those included in the numerator. For lb_ratio the values given by the numerator argument are not added.}
 
-\item{digits}{The number of digits to round to if converting proportion to percentage.}
+\item{round}{A logical indicating whether to round the output.}
+
+\item{digits}{The number of decimal places to round to, passed to the round function.}
 }
 \value{
-The proportion of specified values, presented as a percentage or proportion.
+lb_prop returns the proportion of specified values, presented as a percentage or raw proportion.
+
+lb_ratio returns a ratio.
 }
 \description{
-Calculate a proportion from a vector.
+Calculate a proportion or a ratio from a vector.
 }
 \examples{
-lb_prop(x = c(T, T, T, T, F, NA), numerator = T, denominator = F)
-lb_prop(x = c(T, T, T, T, F, NA), numerator = T, denominator = F, percent = FALSE)
+example <- c(T, T, T, T, T, F, F, F, NA)
+lb_prop(x = example, numerator = T, denominator = F)
+lb_prop(x = example, numerator = T, denominator = F, percent = FALSE, digits = 3)
+
+lb_ratio(example, T, F)
+lb_ratio(example, T, F, round = TRUE)
 }

@@ -1,17 +1,24 @@
-#' Calculate a proportion from a vector.
+#' Calculate a proportion or a ratio from a vector.
 #'
-#' @param x A vector to calculate a proportion from.
+#' @param x A vector to calculate a proportion or ratio from.
 #' @param numerator A vector of elements to count in the numerator.
-#' @param denominator A vector of elements to count in the denominator in addition to those included in the numerator.
-#' @param digits The number of digits to round to if converting proportion to percentage.
+#' @param denominator For lb_prop this is a vector of elements to count in the denominator in addition to those included in the numerator. For lb_ratio the values given by the numerator argument are not added.
+#' @param round A logical indicating whether to round the output.
+#' @param digits The number of decimal places to round to, passed to the round function.
 #'
-#' @return The proportion of specified values, presented as a percentage or proportion.
+#' @return lb_prop returns the proportion of specified values, presented as a percentage or raw proportion.
+#'
+#' lb_ratio returns a ratio.
 #'
 #' @examples
-#' lb_prop(x = c(T, T, T, T, F, NA), numerator = T, denominator = F)
-#' lb_prop(x = c(T, T, T, T, F, NA), numerator = T, denominator = F, percent = FALSE)
+#' example <- c(T, T, T, T, T, F, F, F, NA)
+#' lb_prop(x = example, numerator = T, denominator = F)
+#' lb_prop(x = example, numerator = T, denominator = F, percent = FALSE, digits = 3)
+#'
+#' lb_ratio(example, T, F)
+#' lb_ratio(example, T, F, round = TRUE)
 
-lb_prop <- function(x, numerator, denominator, percent = TRUE, digits = 1){
+lb_prop <- function(x, numerator, denominator, percent = TRUE, round = TRUE, digits = 1){
 
   n <- sum(x %in% numerator)
   d <- sum(x %in% c(numerator, denominator))
@@ -19,8 +26,28 @@ lb_prop <- function(x, numerator, denominator, percent = TRUE, digits = 1){
   prop <- n/d
 
   if(percent == TRUE){
-    prop <- round(prop*100, digits)
+    prop <- prop*100
+  }
+
+  if(round == TRUE){
+    prop <- round(prop, digits = digits)
   }
 
   prop
+}
+
+#' @rdname lb_prop
+
+lb_ratio <- function(x, numerator, denominator, round = FALSE,  digits = 1){
+
+  n <- sum(x %in% numerator)
+  d <- sum(x %in% c(denominator))
+
+  ratio <- n/d
+
+  if(round == TRUE){
+    ratio <- round(ratio, digits)
+  }
+
+  ratio
 }
