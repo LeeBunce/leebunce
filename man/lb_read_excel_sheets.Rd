@@ -19,7 +19,7 @@ lb_read_excel_sheets(x, ignore = NULL, bind = TRUE, ...)
 Reads all sheets from an excel file into R as a single data frame, or if bind = FALSE a list of data frames.
 }
 \description{
-Read multiple sheets from an excel workbook
+The motivation behind this function is cases where an excel workbook contains a number of sheets in the same format, where each sheet in effect represents a variable.
 }
 \examples{
 # Download Guardian university league table spreadsheet and save to desktop.

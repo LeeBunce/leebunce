@@ -1,5 +1,7 @@
 #' Read multiple sheets from an excel workbook
 #'
+#' The motivation behind this function is cases where an excel workbook contains a number of sheets in the same format, where each sheet in effect represents a variable.
+#'
 #' @param x An excel workbook.
 #' @param ignore A vector of sheet names to ignore.
 #' @param bind If TRUE then return a single data frame with id column 'Sheet'. Otherwise returns a list of data frames.
