@@ -7,7 +7,7 @@
 percent(x, digits = 1)
 }
 \arguments{
-\item{x}{A vaue to convert to a percentage.}
+\item{x}{A value to convert to a percentage.}
 
 \item{digits}{The number of decimal places to round to, passed to the round function.}
 }
