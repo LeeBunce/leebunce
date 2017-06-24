@@ -8,14 +8,14 @@
 #' academic_year(as.Date('2017-07-31'))
 #' academic_year(as.Date('2017-08-01'))
 
-academic_year <- function(date) {
-  if (is.Date(date) == FALSE)
-    stop("Value is not a date.", call. = FALSE)
+academic_year <- function(x) {
+  if (is.Date(x) == FALSE)
+    stop("x is not a date.", call. = FALSE)
 
-  academic_year <- if (month(date) < 8) {
-    paste0(year(date) - 1, '/', str_sub(year(date), 3, 4))
+  academic_year <- if (month(x) < 8) {
+    paste0(year(x) - 1, '/', str_sub(year(x), 3, 4))
   } else {
-    paste0(year(date), '/', str_sub(year(date) + 1, 3, 4))
+    paste0(year(x), '/', str_sub(year(x) + 1, 3, 4))
   }
 
   academic_year

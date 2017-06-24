@@ -4,7 +4,7 @@
 \alias{academic_year}
 \title{Maps a date to an academic year.}
 \usage{
-academic_year(date)
+academic_year(x)
 }
 \arguments{
 \item{x}{A date to map to an acedemic year.}
