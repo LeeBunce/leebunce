@@ -13,12 +13,12 @@
 #' # Download Guardian university league table spreadsheet and save to desktop.
 #' # https://docs.google.com/spreadsheets/d/1P1AiFGB5UFO0v26Ufe_3YNOT4lISK6DAaC8dvDRiVzs/edit#gid=1544561606
 #'
-#' lb_read_excel_sheets(x = "~/Desktop/Guardian University Guide 2018.xlsx",
+#' read_excel_sheets(x = "~/Desktop/Guardian University Guide 2018.xlsx",
 #'   ignore = c('Institutional', 'Sheet2', 'Sheet3'),
 #'   skip = 1,
 #'   n_max = 159)
 
-lb_read_excel_sheets <- function(x, ignore = NULL, bind = TRUE, ...){
+read_excel_sheets <- function(x, ignore = NULL, bind = TRUE, ...){
   sheets <- readxl::excel_sheets(x) %>%
     .[!(. %in% ignore)]
 
