@@ -1,6 +1,6 @@
 #' Convert a proportion to a percentage.
 #'
-#' @param x A vaue to convert to a percentage.
+#' @param x A value to convert to a percentage.
 #' @param digits The number of decimal places to round to, passed to the round function.
 #'
 #' @return percent simply takes a proprtion and converts to a percentage by multiplying by 100 and rounding.
