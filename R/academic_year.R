@@ -2,7 +2,7 @@
 #'
 #' @param x A date to map to an acedemic year.
 #'
-#' @return An academic year as a charachter.
+#' @return An academic year as a charachter. Academic years run from August 1st to July 31st.
 #'
 #' @examples
 #' academic_year(as.Date('2017-07-31'))
