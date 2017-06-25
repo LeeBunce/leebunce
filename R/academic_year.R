@@ -9,7 +9,7 @@
 #' academic_year(as.Date('2017-08-01'))
 
 academic_year <- function(x) {
-  if (is.Date(x) == FALSE)
+  if (lubridate::is.Date(x) == FALSE)
     stop("x is not a date.", call. = FALSE)
 
   academic_year <- ifelse(month(x) < 8,

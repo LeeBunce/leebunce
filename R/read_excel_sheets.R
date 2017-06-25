@@ -22,14 +22,14 @@ read_excel_sheets <- function(x, ignore = NULL, bind = TRUE, ...){
   sheets <- readxl::excel_sheets(x) %>%
     .[!(. %in% ignore)]
 
-  uploads <- map(sheets, read_excel,
+  uploads <- purrr::map(sheets, readxl::read_excel,
                  path = x,
                  ...)
 
   names(uploads) <- sheets
 
   if(bind == TRUE){
-    uploads <- bind_rows(uploads, .id = 'Sheet')
+    uploads <- dplyr::bind_rows(uploads, .id = 'Sheet')
   }
 
   uploads
