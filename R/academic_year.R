@@ -13,8 +13,8 @@ academic_year <- function(x) {
     stop("x is not a date.", call. = FALSE)
 
   academic_year <- ifelse(lubridate::month(x) < 8,
-                          paste0(year(x) - 1, '/', stringr::str_sub(year(x), 3, 4)),
-                          paste0(year(x), '/', stringr::str_sub(year(x) + 1, 3, 4)))
+                          paste0(lubridate::year(x) - 1, '/', stringr::str_sub(lubridate::year(x), 3, 4)),
+                          paste0(lubridate::year(x), '/', stringr::str_sub(lubridate::year(x) + 1, 3, 4)))
 
   academic_year
 }
