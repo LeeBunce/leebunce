@@ -7,6 +7,7 @@
 #' @examples
 #' academic_year(as.Date('2017-07-31'))
 #' academic_year(as.Date('2017-08-01'))
+#' @export
 
 academic_year <- function(x) {
   if (any(!is.na(x) & !lubridate::is.Date(x))) stop("x is not a date.", call. = FALSE)

@@ -17,6 +17,7 @@
 #'   ignore = c('Institutional', 'Sheet2', 'Sheet3'),
 #'   skip = 1,
 #'   n_max = 159)
+#' @export
 
 read_excel_sheets <- function(x, ignore = NULL, bind = TRUE, ...){
   sheets <- readxl::excel_sheets(x) %>%

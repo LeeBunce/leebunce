@@ -18,6 +18,7 @@
 #'
 #' lb_ratio(example, T, F)
 #' lb_ratio(example, T, F, round = TRUE)
+#' @export
 
 prop <- function(x, numerator, denominator, percent = TRUE, round = TRUE, digits = 1){
 
@@ -38,6 +39,7 @@ prop <- function(x, numerator, denominator, percent = TRUE, round = TRUE, digits
 }
 
 #' @rdname prop
+#' @export
 
 ratio <- function(x, numerator, denominator, round = FALSE,  digits = 1){
 

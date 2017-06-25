@@ -8,6 +8,7 @@
 #' @examples
 #' percent(0.43569)
 #' percent(0.43569, digits = 2)
+#' @export
 
 percent <- function(x, digits = 1){
   percentage <- round(x*100, digits = digits)
