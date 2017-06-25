@@ -12,6 +12,7 @@ Imports:
   lubridate (>= 1.6.0)
   magrittr (>= 1.5),
   readxl (>= 1.0.0),
-  purrr (>= 0.2.2.2)
+  purrr (>= 0.2.2.2),
+  stringr (>= 1.2.0)
 RoxygenNote: 6.0.1
 Suggests: testthat
