@@ -44,7 +44,7 @@ prop <- function(x, numerator, denominator, percent = TRUE, round = TRUE, digits
 ratio <- function(x, numerator, denominator, round = FALSE,  digits = 1){
 
   n <- sum(x %in% numerator)
-  d <- sum(x %in% c(denominator))
+  d <- sum(x %in% denominator)
 
   ratio <- n/d
 
