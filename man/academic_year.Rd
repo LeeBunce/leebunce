@@ -10,7 +10,7 @@ academic_year(x)
 \item{x}{A date to map to an acedemic year.}
 }
 \value{
-An academic year as a charachter.
+An academic year as a charachter. Academic years run from August 1st to July 31st.
 }
 \description{
 Maps a date to an academic year.
