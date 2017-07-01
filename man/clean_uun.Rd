@@ -17,4 +17,5 @@ This function converts UUN's to a clean format. This is a string beginning with 
 }
 \examples{
 clean_uun('s1234567')
+clean_uun(1234567)
 }
