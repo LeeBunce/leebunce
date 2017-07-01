@@ -8,20 +8,18 @@
 #'
 #' @examples
 #' clean_uun('s1234567')
+#' clean_uun(1234567)
 #' @export
 
-clean_uun <- function(uun_list){
-     for (i in seq_along(uun_list)){
+clean_uun <- function(x) {
+  if (any(!grepl("^[0-9]{7}$", x) & !grepl("^s[0-9]{7}$", x) & !is.na(x))) {
+    warning('Some values do not match UUN format')
+  }
 
-          if (grepl("^[0-9]{7,}$", uun_list[i])) {
-               uun_list[i] <- paste("S", uun_list[i], sep = "")
-          }
+  clean <- ifelse(grepl("^[0-9]{7}$", x),
+                  paste0("S", x),
+                  ifelse(grepl("^s[0-9]{7}$", x), toupper(x),
+                         x))
+  clean
 
-          if (grepl("^s[0-9]{7,}$", uun_list[i])) {
-               uun_list[i] <- toupper(uun_list[i])
-          }
-     }
-
-     uun_list
 }
-

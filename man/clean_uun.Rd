@@ -4,7 +4,7 @@
 \alias{clean_uun}
 \title{Produces a 'clean' uun.}
 \usage{
-clean_uun(uun_list)
+clean_uun(x)
 }
 \arguments{
 \item{x}{A vector of uun's to be cleaned.}
