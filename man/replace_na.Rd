@@ -15,7 +15,7 @@ replace_na(x, string)
 A character vector.
 }
 \description{
-Replace NA values with a string.
+While it is more common to replace strings with NA for analysis it is sometimes nice to make the opposite change for presentation purposes.
 }
 \examples{
 replace_na(NA, 'Missing')
