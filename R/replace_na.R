@@ -4,7 +4,7 @@
 #'
 #' @param x A vector.
 #'
-#' @param string A string
+#' @param string A string.
 #'
 #' @return A character vector.
 #'
