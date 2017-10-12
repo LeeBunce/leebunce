@@ -13,7 +13,7 @@
 
 clean_uun <- function(x) {
   if (any(!grepl("^[0-9]{7}$", x) & !grepl("^s[0-9]{7}$", x) & !grepl("^S[0-9]{7}$", x) & !is.na(x))) {
-    warning('Some values do not match UUN format')
+    warning('Some values do not match expected UUN format')
   }
 
   clean <- ifelse(grepl("^[0-9]{7}$", x),
