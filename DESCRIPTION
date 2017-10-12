@@ -1,7 +1,7 @@
 Package: leebunce
 Type: Package
 Title: A collection of functions used by Lee Bunce
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: person("Lee", "Bunce", email = "leebunce@riseup.net", role = c("aut", "cre", "cph"))
 Description: This package is a collection of functions I have created that I commonly use.
 License: GPL-2
