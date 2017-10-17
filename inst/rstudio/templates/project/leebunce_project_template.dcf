@@ -1,0 +1,10 @@
+Binding: leebunce_project_template
+Title: Lee Bunce Project Template
+Subtitle: A project template used by Lee Bunce
+OpenFiles: INDEX
+
+Parameter: check
+Widget: CheckboxInput
+Label: Checkbox Input
+Default: On
+Position: left
