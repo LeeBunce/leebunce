@@ -1,11 +1,13 @@
 # Project template function
 
-leebunce_project_template <- function(){
-  dir.create('Data')
-  dir.create('Scripts')
-  dir.create('Output')
+leebunce_project_template <- function(path){
+  dir.create(path)
 
-  fileConn<-file("Scripts/Main.R")
+  dir.create(paste0(path, '/Data'))
+  dir.create(paste0(path, '/Scripts'))
+  dir.create(paste0(path, '/Output'))
+
+  fileConn<-file(paste0(path, '/Scripts/Main.R'))
   writeLines(c("# Title",
                "",
                "# Packages ----------------------------------------------------------------",
