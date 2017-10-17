@@ -1,7 +1,7 @@
 # Project template function
 
 leebunce_project_template <- function(path){
-  dir.create(path)
+  dir.create(path, recursive = TRUE)
 
   dir.create(paste0(path, '/Data'))
   dir.create(paste0(path, '/Scripts'))
