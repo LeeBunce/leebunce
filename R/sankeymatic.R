@@ -26,8 +26,8 @@ sankeymatic <- function(df, left, right) {
   right <- rlang::enquo(right)
 
   dplyr::count(df, !!left, !!right) %>%
-    mutate(sankeymatic = paste0("1.", !!left, " [", n, "] ",  "2.", !!right)) %>%
-    select(sankeymatic) %>%
+    dplyr::mutate(sankeymatic = paste0("1.", !!left, " [", n, "] ",  "2.", !!right)) %>%
+    dplyr::select(sankeymatic) %>%
     as.data.frame()
 
 }
