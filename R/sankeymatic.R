@@ -1,6 +1,6 @@
 #' Create Sankey charts with sankeymatic.com
 #'
-#' This function produces a data.frame of text that can be pasted into sankeymatic.com. It is essentially an unsatisfactory stop gap until some nice way of producing sankey charts in ggplot2 is introduced.
+#' This function produces a data.frame of text that can be pasted into sankeymatic.com for the creation of sankey charts. It is essentially an unsatisfactory stop gap until some nice way of producing sankey charts in ggplot2 is introduced.
 #'
 #' @param df A data frame from which to creat the sankey chart.
 #'

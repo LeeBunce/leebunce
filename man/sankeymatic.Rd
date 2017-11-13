@@ -2,7 +2,7 @@
 % Please edit documentation in R/sankeymatic.R
 \name{sankeymatic}
 \alias{sankeymatic}
-\title{Outputs text for pasting into sankeymatic.com}
+\title{Create Sankey charts with sankeymatic.com}
 \usage{
 sankeymatic(df, left, right)
 }
@@ -19,7 +19,7 @@ A data.frame with one column, 'sankeymatic', of nodes and counts in the format r
 A data.frame is produced rather than a tibble as the print method allows row.names and right align to be suppressed. Text can then be copied directly from the console.
 }
 \description{
-This function produces a data.frame of text that can be pasted into sankeymatic.com. It is essentially a stop gap function until some nice way of producing sankey charts in ggplot2 is introduced.
+This function produces a data.frame of text that can be pasted into sankeymatic.com for the creation of sankey charts. It is essentially an unsatisfactory stop gap until some nice way of producing sankey charts in ggplot2 is introduced.
 }
 \examples{
 library(ggplot2)
