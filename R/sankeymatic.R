@@ -17,11 +17,13 @@
 #' sankeymatic(diamonds, cut, color)
 #' sankeymatic(diamonds, cut, color) %>%  print(right = FALSE, row.names = FALSE)
 #' @export
+#'
+#' @importFrom magrittr "%>%"
 
 sankeymatic <- function(df, left, right) {
 
-  left <- enquo(left)
-  right <- enquo(right)
+  left <- rlang::enquo(left)
+  right <- rlang::enquo(right)
 
   dplyr::count(df, !!left, !!right) %>%
     mutate(sankeymatic = paste0("1.", !!left, " [", n, "] ",  "2.", !!right)) %>%
