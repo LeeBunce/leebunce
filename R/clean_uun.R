@@ -16,10 +16,7 @@ clean_uun <- function(x) {
     warning('Some values do not match expected UUN format')
   }
 
-  clean <- ifelse(grepl("^[0-9]{7}$", x),
-                  paste0("S", x),
-                  ifelse(grepl("^s[0-9]{7}$", x), toupper(x),
-                         x))
-  clean
+ifelse(grepl("^[0-9]{7}$", x), paste0("S", x),
+       ifelse(grepl("^s[0-9]{7}$", x), toupper(x), x))
 
 }

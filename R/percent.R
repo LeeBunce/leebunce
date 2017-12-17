@@ -11,6 +11,5 @@
 #' @export
 
 percent <- function(x, digits = 1){
-  percentage <- round(x*100, digits = digits)
-  percentage
+  round(x*100, digits = digits)
 }

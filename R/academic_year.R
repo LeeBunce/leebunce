@@ -12,9 +12,8 @@
 academic_year <- function(x) {
   if (any(!is.na(x) & !lubridate::is.Date(x))) stop("x is not a date.", call. = FALSE)
 
-  academic_year <- ifelse(lubridate::month(x) < 8,
-                          paste0(lubridate::year(x) - 1, '/', stringr::str_sub(lubridate::year(x), 3, 4)),
-                          paste0(lubridate::year(x), '/', stringr::str_sub(lubridate::year(x) + 1, 3, 4)))
+  ifelse(lubridate::month(x) < 8,
+         paste0(lubridate::year(x) - 1, '/', stringr::str_sub(lubridate::year(x), 3, 4)),
+         paste0(lubridate::year(x), '/', stringr::str_sub(lubridate::year(x) + 1, 3, 4)))
 
-  academic_year
 }
