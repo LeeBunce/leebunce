@@ -23,13 +23,13 @@ summarise_total <- function(df, label = "Total", ...) {
 
   # Summarise grouped df and convert grouping variables to charachter vectors
   grouped_summary <- dplyr::summarise(df, ...) %>%
-    ungroup() %>%
-    mutate_at(group_vars(df), as.character)
+    dplyr::ungroup() %>%
+    dplyr::mutate_at(dplyr::group_vars(df), as.character)
 
   # Summarise ungrouped df and add additional columns
-  ungrouped_summary <- dplyr::summarise(ungroup(df), ...)
+  ungrouped_summary <- dplyr::summarise(dplyr::ungroup(df), ...)
 
-  for (i in group_vars(df)){
+  for (i in dplyr::group_vars(df)){
     ungrouped_summary <- dplyr::mutate(ungrouped_summary, !!i := label)
   }
 
