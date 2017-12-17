@@ -6,14 +6,14 @@ test_that("Error returned for ungrouped df", {
 
 test_that('Correct value is calculated', {
   iris_summarised <- iris %>%
-    group_by(Species) %>%
+    dplyr::group_by(Species) %>%
     summarise_total(n = n(), `Mean Sepal Length` = mean(Sepal.Length))
 
   expect_equal(iris_summarised[[4, 3]], mean(iris$Sepal.Length))
 })
 
 test_that('Total row is correctly labelled', {
-  iris_grouped <- iris %>% group_by(Species)
+  iris_grouped <- iris %>% dplyr::group_by(Species)
   total <- summarise_total(iris_grouped, n = n(), `Mean Sepal Length` = mean(Sepal.Length))
   overall <- summarise_total(iris_grouped, n = n(), label = 'Overall')
 
@@ -23,7 +23,7 @@ test_that('Total row is correctly labelled', {
 
 test_that('Class of grouping variable columns in output is character', {
   iris_summarised <- iris %>%
-    group_by(Species) %>%
+    dplyr::group_by(Species) %>%
     summarise_total(n = n(), `Mean Sepal Length` = mean(Sepal.Length))
 
   expect_true(is.character(iris_summarised$Species))
