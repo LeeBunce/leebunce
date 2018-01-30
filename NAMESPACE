@@ -2,6 +2,7 @@
 
 export(academic_year)
 export(clean_uun)
+export(fix_academic_year)
 export(percent)
 export(prop)
 export(ratio)

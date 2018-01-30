@@ -32,9 +32,9 @@ Calculate a proportion or a ratio from a vector.
 }
 \examples{
 example <- c(T, T, T, T, T, F, F, F, NA)
-lb_prop(x = example, numerator = T, denominator = F)
-lb_prop(x = example, numerator = T, denominator = F, percent = FALSE, digits = 3)
+prop(x = example, numerator = T, denominator = F)
+prop(x = example, numerator = T, denominator = F, percent = FALSE, digits = 3)
 
-lb_ratio(example, T, F)
-lb_ratio(example, T, F, round = TRUE)
+ratio(example, T, F)
+ratio(example, T, F, round = TRUE)
 }
