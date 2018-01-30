@@ -10,8 +10,6 @@
 #' fix_academic_year('2014/65')
 #' @export
 
-# Converts academic year in form '2014/5' to '2014/15'.
-
 fix_academic_year <- function(x){
 
      if(any(!is.na(x) & !stringr::str_detect(x, '^[0-9]{4}/[0-9]$'))){
