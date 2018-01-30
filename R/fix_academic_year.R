@@ -18,8 +18,6 @@ fix_academic_year <- function(x){
           stop('Some values are not in the format yyyy/y')
      }
 
-     #year <- stringr::str_sub(x, 1, 4) %>% as.numeric()
-
      year <- as.numeric(stringr::str_sub(x, 1, 4))
 
      subsequent <- year + 1
