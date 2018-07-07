@@ -2,7 +2,7 @@
 #'
 #' @param x A vector to calculate a proportion or ratio from.
 #' @param numerator A vector of elements to count in the numerator.
-#' @param denominator For lb_prop this is a vector of elements to count in the denominator in addition to those included in the numerator. For lb_ratio the values given by the numerator argument are not added.
+#' @param denominator For prop this is a vector of elements to count in the denominator in addition to those included in the numerator. For ratio the values given by the numerator argument are not added.
 #' @param percect A logical indicating whether to present the output as a percentage rather than a proportion..
 #' @param round A logical indicating whether to round the output.
 #' @param digits The number of decimal places to round to, passed to the round function.
