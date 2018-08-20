@@ -4,7 +4,7 @@ author: "Lee Bunce"
 date: "`r Sys.Date()`"
 output: 
      word_document:
-          reference_docx: Templates/Word_Template.docx
+          reference_docx: word_template.docx
           fig_width: 9
 ---
 
