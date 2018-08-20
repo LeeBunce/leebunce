@@ -1,0 +1,19 @@
+---
+title: "Untitled"
+author: "Lee Bunce"
+date: "`r Sys.Date()`"
+output: 
+     word_document:
+          reference_docx: Templates/Word_Template.docx
+          fig_width: 9
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(leebunce)
+
+```
+
+# Untitled
