@@ -16,7 +16,7 @@ leebunce_project_template <- function(path, data, scripts, output, word_report){
   if(output) dir.create(paste0(path, '/Output'))
 
   if(word_report) {
-    rmarkdown::draft(file = 'Report',
+    rmarkdown::draft(file = paste0(path, '/Report'),
                      template = 'leebunce_word_template',
                      package = 'leebunce',
                      create_dir = TRUE,
