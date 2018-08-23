@@ -8,13 +8,8 @@ leebunce_project_template <- function(path, data, scripts, output){
   if(scripts == TRUE) {
     dir.create(paste0(path, '/Scripts'))
 
-    fileConn<-file(paste0(path, '/Scripts/Main.R'))
-    writeLines(c("# Title",
-                 "",
-                 "# Packages ----------------------------------------------------------------",
-                 "library(tidyverse)",
-                 "library(leebunce)"), fileConn)
-    close(fileConn)
+    file.copy(from = system.file('misc', 'Main.R', package = 'leebunce'),
+              to = paste0(path, '/Scripts/Main.R'))
 
     }
 
