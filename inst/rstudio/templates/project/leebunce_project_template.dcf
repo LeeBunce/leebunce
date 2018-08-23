@@ -20,3 +20,9 @@ Widget: CheckboxInput
 Label: Outputs directory?
 Default: Off
 Position: left
+
+Parameter: word_report
+Widget: CheckboxInput
+Label: Word report?
+Default: On
+Position: right
