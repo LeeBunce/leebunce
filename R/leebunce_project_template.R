@@ -1,18 +1,26 @@
 # Project template function
 
-leebunce_project_template <- function(path){
+leebunce_project_template <- function(path, data, scripts, output, word_report){
   dir.create(path, recursive = TRUE)
 
-  dir.create(paste0(path, '/Data'))
-  dir.create(paste0(path, '/Scripts'))
-  dir.create(paste0(path, '/Output'))
+  if(data) dir.create(paste0(path, '/Data'))
 
-  fileConn<-file(paste0(path, '/Scripts/Main.R'))
-  writeLines(c("# Title",
-               "",
-               "# Packages ----------------------------------------------------------------",
-               "library(tidyverse)",
-               "library(leebunce)"), fileConn)
-  close(fileConn)
+  if(scripts) {
+    dir.create(paste0(path, '/Scripts'))
+
+    file.copy(from = system.file('misc', 'Main.R', package = 'leebunce'),
+              to = paste0(path, '/Scripts/Main.R'))
+
+    }
+
+  if(output) dir.create(paste0(path, '/Output'))
+
+  if(word_report) {
+    rmarkdown::draft(file = paste0(path, '/Report'),
+                     template = 'leebunce_word_template',
+                     package = 'leebunce',
+                     create_dir = TRUE,
+                     edit = FALSE)
+  }
 
 }

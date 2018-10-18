@@ -2,3 +2,27 @@ Binding: leebunce_project_template
 Title: Lee Bunce Project Template
 Subtitle: A project template used by Lee Bunce
 OpenFiles: INDEX
+
+Parameter: data
+Widget: CheckboxInput
+Label: Data directory?
+Default: Off
+Position: left
+
+Parameter: scripts
+Widget: CheckboxInput
+Label: Scripts directory?
+Default: Off
+Position: left
+
+Parameter: output
+Widget: CheckboxInput
+Label: Outputs directory?
+Default: Off
+Position: left
+
+Parameter: word_report
+Widget: CheckboxInput
+Label: Word report?
+Default: On
+Position: right
