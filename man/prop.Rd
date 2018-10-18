@@ -5,7 +5,8 @@
 \alias{ratio}
 \title{Calculate a proportion or a ratio from a vector.}
 \usage{
-prop(x, numerator, denominator, percent = TRUE, round = TRUE, digits = 1)
+prop(x, numerator, denominator, percent = TRUE, round = TRUE,
+  digits = 1)
 
 ratio(x, numerator, denominator, round = FALSE, digits = 1)
 }
@@ -14,7 +15,7 @@ ratio(x, numerator, denominator, round = FALSE, digits = 1)
 
 \item{numerator}{A vector of elements to count in the numerator.}
 
-\item{denominator}{For lb_prop this is a vector of elements to count in the denominator in addition to those included in the numerator. For lb_ratio the values given by the numerator argument are not added.}
+\item{denominator}{For prop this is a vector of elements to count in the denominator in addition to those included in the numerator. For ratio the values given by the numerator argument are not added.}
 
 \item{round}{A logical indicating whether to round the output.}
 
