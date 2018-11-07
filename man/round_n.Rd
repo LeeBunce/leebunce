@@ -7,17 +7,18 @@
 round_n(x, n)
 }
 \arguments{
-\item{x}{A numeric vector.}
+\item{x}{A numeric vector or a data.frame.}
 
 \item{n}{An integer to round to.}
 }
 \value{
-A numeric vector.
+A numeric vector or a data.frame.
 }
 \description{
-This function rounds a number to a specified integer.
+This function rounds a number to a specified integer. If x is a data.frame then rounding is applied to all numeric variables.
 }
 \examples{
 round_n(16, 5)
 round_n(c(7, 16, NA), 5)
+round_n(iris, 5)
 }
