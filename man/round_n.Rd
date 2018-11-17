@@ -19,10 +19,11 @@ A numeric vector or a data.frame.
 }
 \description{
 This function rounds a number to a specified integer. If x is a data.frame then rounding is applied to all numeric variables.
-The function round_n gives a particularly common use case, as published data is often rounded to the nearest 5 for disclodure control.
+The function round_5 gives a particularly common use case, as published data is often rounded to the nearest 5 for disclodure control.
 }
 \examples{
 round_n(16, 5)
 round_n(c(7, 16, NA), 5)
 round_n(iris, 5)
+round_5(iris)
 }
