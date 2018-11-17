@@ -13,3 +13,8 @@ test_that("round_n handles data frames.", {
   expect_equal(class(round_n(iris, 5)),  'data.frame')
   expect_equal(round_n(iris, 5)[1, 1], 5)
 })
+
+test_that("round_5 works correctly.", {
+  expect_equal(round_n(iris, 5), round_5(iris))
+  expect_equal(round_n(1:10, 5), round_5(1:10))
+})
