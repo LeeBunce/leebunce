@@ -1,4 +1,4 @@
-context("Academic year")
+context("academic year")
 
 test_that("Academic year gives the correct year", {
   expect_equal(academic_year(as.Date('2017-07-31')), '2016/17')
