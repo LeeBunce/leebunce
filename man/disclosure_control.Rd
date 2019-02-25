@@ -13,7 +13,8 @@ disclosure_control(x)
 A numeric vector or a data.frame.
 }
 \description{
-This function applies the standard method of disclosure control used in homelessness. If x is a data.frame then rounding is applied to all numeric variables.
+This function applies a standard method of disclosure control used for example in the Scottish Government.
+If x is a data.frame then rounding is applied to all numeric variables.
 }
 \examples{
 disclosure_control(0:10)
